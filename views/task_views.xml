@@ -1,0 +1,106 @@
+<odoo>
+
+    <!-- Action debe ir antes de los menús -->
+    <record id="action_task_items" model="ir.actions.act_window">
+        <field name="name">Tareas</field>
+        <field name="res_model">task.task</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Vista lista -->
+    <record id="view_task_tree" model="ir.ui.view">
+        <field name="name">task.task.tree</field>
+        <field name="model">task.task</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="deadline"/>
+                <field name="status"/>
+                <field name="priority"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista formulario -->
+    <record id="view_task_form" model="ir.ui.view">
+        <field name="name">task.task.form</field>
+        <field name="model">task.task</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="user_id"/>
+                        <field name="deadline"/>
+                        <field name="status"/>
+                        <field name="priority"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de búsqueda avanzada -->
+    <record id="view_task_search" model="ir.ui.view">
+        <field name="name">task.task.search</field>
+        <field name="model">task.task</field>
+        <field name="arch" type="xml">
+            <search>
+
+                <!-- Campos disponibles para búsqueda rápida -->
+                <field name="name" string="Nombre"/>
+                <field name="user_id" string="Responsable"/>
+                <field name="priority" string="Prioridad"/>
+                <field name="deadline" string="Fecha límite"/>
+
+                <!-- Filtros por prioridad -->
+                <filter name="priority_high" string="Alta" domain="[('priority','=','alta')]"/>
+                <filter name="priority_medium" string="Media" domain="[('priority','=','media')]"/>
+                <filter name="priority_low" string="Baja" domain="[('priority','=','baja')]"/>
+
+                <separator/>
+
+                <!-- Filtros por estado -->
+                <filter name="state_pending" string="Pendiente" domain="[('status','=','pendiente')]"/>
+                <filter name="state_progress" string="En progreso" domain="[('status','=','en_progreso')]"/>
+                <filter name="state_done" string="Completada" domain="[('status','=','completada')]"/>
+
+                <separator/>
+
+                <!-- Filtros por fecha -->
+                <filter name="due_today" string="Vence hoy"
+                        domain="[('deadline','=', context_today())]"/>
+                <filter name="due_overdue" string="Atrasadas"
+                        domain="[('deadline','&lt;', context_today())]"/>
+
+                <filter name="due_week" string="Próximas"
+                        domain="[('deadline','>=', context_today())]"/>
+
+
+                <separator/>
+
+                <!-- Tareas del usuario actual -->
+                <filter name="my_tasks" string="Mis tareas"
+                        domain="[('user_id','=',uid)]"/>
+
+                <separator/>
+
+                <!-- Agrupar por -->
+                <group expand="0" string="Agrupar por">
+                    <filter string="Estado" name="group_by_status" context="{'group_by': 'status'}"/>
+                    <filter string="Responsable" name="group_by_user" context="{'group_by': 'user_id'}"/>
+                    <filter string="Prioridad" name="group_by_priority" context="{'group_by': 'priority'}"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
+
+
+    <!-- Menús -->
+    <menuitem id="menu_task_root" name="Gestión de Tareas"/>
+    <menuitem id="menu_task_items" parent="menu_task_root" name="Tareas" action="action_task_items"/>
+
+</odoo>
