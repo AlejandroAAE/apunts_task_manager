@@ -75,10 +75,17 @@ Pulsar “Actualizar lista de módulos”.
 Buscar Apunts Task Manager e instalarlo.
 
 
+### Aspecto Base
+<img src="imagenes/tareas1.png" width="1000">
+
+### Filtros
+<img src="imagenes/tareas2.png" width="1000">
+
+### Filtros 2
+<img src="imagenes/tareas3.png" width="1000">
 
 
 ```bash
-
 Estructura del módulo
 apunts_task_manager/
 │
@@ -89,13 +96,3 @@ apunts_task_manager/
 │   └── task_views.xml
 ├── imagenes/
 └── __init__.py
-
-´´´
-### Aspecto Base
-<img src="imagenes/tareas1.png" width="1000">
-
-### Filtros
-<img src="imagenes/tareas2.png" width="1000">
-
-### Filtros 2
-<img src="imagenes/tareas3.png" width="1000">
