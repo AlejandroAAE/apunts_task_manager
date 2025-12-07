@@ -31,7 +31,7 @@ Incluye creación de tareas, fechas límite, prioridad, estado y filtrado avanza
  1. Copiar el módulo
 Clona este repositorio dentro de la carpeta `addons` de tu instancia de Odoo:
 
-```bash
+
 git clone https://github.com/AlejandroAAE/apunts_task_manager.git
 
 2. Ejecutar Odoo con Docker (opcional)
@@ -77,6 +77,8 @@ Buscar Apunts Task Manager e instalarlo.
 
 
 
+
+
 Estructura del módulo
 apunts_task_manager/
 │
@@ -97,5 +99,3 @@ apunts_task_manager/
 
 ### Filtros 2
 <img src="imagenes/tareas3.png" width="1000">
-
-
