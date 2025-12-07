@@ -88,15 +88,14 @@ apunts_task_manager/
 ├── imagenes/
 └── __init__.py
 
-Aspecto Base
+
+### Aspecto Base
 <img src="imagenes/tareas1.png" width="1000">
 
-
-Filtros
+### Filtros
 <img src="imagenes/tareas2.png" width="1000">
 
-
-Filtros 2
+### Filtros 2
 <img src="imagenes/tareas3.png" width="1000">
 
 
