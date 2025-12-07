@@ -77,7 +77,7 @@ Buscar Apunts Task Manager e instalarlo.
 
 
 
-
+```bash
 
 Estructura del módulo
 apunts_task_manager/
@@ -90,7 +90,7 @@ apunts_task_manager/
 ├── imagenes/
 └── __init__.py
 
-
+´´´
 ### Aspecto Base
 <img src="imagenes/tareas1.png" width="1000">
 
