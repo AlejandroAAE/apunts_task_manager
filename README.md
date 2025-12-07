@@ -1,29 +1,75 @@
-# Apunts Task Manager (Odoo)
+# Apunts Task Manager
 
-Módulo personalizado para gestionar tareas internas dentro de Odoo.
+Un módulo sencillo y funcional para Odoo 17 que permite gestionar tareas internas dentro de una organización.  
+Incluye creación de tareas, fechas límite, prioridad, estado y filtrado avanzado desde la vista de búsqueda.
 
-## Funcionalidades
+## Características principales
 
-- Modelo `task.task`
-- Campos:
-  - Título
-  - Responsable
-  - Fecha límite
-  - Estado
-  - Prioridad
-  - Descripción
-- Vistas:
-  - Lista
+- Creación y edición de tareas internas.
+- Campos esenciales:
+  - **Título**
+  - **Responsable**
+  - **Fecha límite**
+  - **Estado** (`pendiente`, `en_progreso`, `completada`)
+  - **Prioridad** (`baja`, `media`, `alta`)
+  - **Descripción**
+- Vistas incluidas:
+  - Lista (tree)
   - Formulario
   - Búsqueda avanzada
-- Filtros útiles:
+- Filtros prácticos:
   - Por prioridad
   - Por estado
-  - Por fecha límite (vencidas, hoy, próximas)
-- Menú propio dentro del panel de Odoo
+  - Por fechas (hoy, atrasadas, próximas)
+  - Mis tareas (usuario actual)
+- Agrupación por estado, responsable o prioridad.
+
+---
 
 ## Instalación
 
-1. Copiar la carpeta `apunts_task_manager` dentro de la ruta `addons` de tu instalación Odoo.
-2. Activar el modo desarrollador en Odoo.
-3. Instalar el módulo desde Ajustes → Aplicaciones.
+ 1. Copiar el módulo
+Clona este repositorio dentro de la carpeta `addons` de tu instancia de Odoo:
+
+```bash
+git clone https://github.com/AlejandroAAE/apunts_task_manager.git
+
+2. Ejecutar Odoo con Docker (opcional)
+
+Ejemplo básico de docker-compose.yml:
+
+services:
+  web:
+    image: odoo:17
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    volumes:
+      - ./addons:/mnt/extra-addons
+      - ./odoo-web-data:/var/lib/odoo
+
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+    volumes:
+      - ./pg-data:/var/lib/postgresql/data
+
+
+Levantar contenedores:
+
+docker compose up -d
+
+
+3. Activar el módulo en Odoo
+
+Ir a Apps.
+
+Activar el Modo Desarrollador.
+
+Pulsar “Actualizar lista de módulos”.
+
+Buscar Apunts Task Manager e instalarlo.
