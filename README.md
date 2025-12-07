@@ -76,13 +76,13 @@ Buscar Apunts Task Manager e instalarlo.
 
 
 ### Aspecto Base
-<img src="imagenes/tareas1.png" width="1000">
+<img src="imagenes/tareas1.PNG" width="1000">
 
 ### Filtros
-<img src="imagenes/tareas2.png" width="1000">
+<img src="imagenes/tareas2.PNG" width="1000">
 
 ### Filtros 2
-<img src="imagenes/tareas3.png" width="1000">
+<img src="imagenes/tareas3.PNG" width="1000">
 
 
 ```bash
