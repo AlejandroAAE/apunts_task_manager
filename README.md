@@ -88,11 +88,14 @@ apunts_task_manager/
 └── __init__.py
 
 Aspecto Base
-<img width="2561" height="351" alt="tareas 1" src="https://github.com/user-attachments/assets/6fb924c6-83f8-48a3-bd0a-84cd69a67cd7" />
+<img src="imagenes/tareas1.png" width="1000">
+
 
 Filtros
-<img width="2559" height="318" alt="tareas 2" src="https://github.com/user-attachments/assets/329244b1-c86b-49a9-a0dc-14872aed64c2" />
+<img src="imagenes/tareas2.png" width="1000">
+
 
 Filtros 2
-<img width="2557" height="350" alt="tareas 3" src="https://github.com/user-attachments/assets/32320998-9284-4a33-89da-9aa1a403061d" />
+<img src="imagenes/tareas3.png" width="1000">
+
 
