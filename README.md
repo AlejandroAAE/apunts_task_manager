@@ -85,6 +85,7 @@ apunts_task_manager/
 │   └── task.py
 ├── views/
 │   └── task_views.xml
+├── imagenes/
 └── __init__.py
 
 Aspecto Base
