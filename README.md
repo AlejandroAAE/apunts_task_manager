@@ -73,3 +73,26 @@ Activar el Modo Desarrollador.
 Pulsar “Actualizar lista de módulos”.
 
 Buscar Apunts Task Manager e instalarlo.
+
+
+
+
+Estructura del módulo
+apunts_task_manager/
+│
+├── __manifest__.py
+├── models/
+│   └── task.py
+├── views/
+│   └── task_views.xml
+└── __init__.py
+
+Aspecto Base
+<img width="2561" height="351" alt="tareas 1" src="https://github.com/user-attachments/assets/6fb924c6-83f8-48a3-bd0a-84cd69a67cd7" />
+
+Filtros
+<img width="2559" height="318" alt="tareas 2" src="https://github.com/user-attachments/assets/329244b1-c86b-49a9-a0dc-14872aed64c2" />
+
+Filtros 2
+<img width="2557" height="350" alt="tareas 3" src="https://github.com/user-attachments/assets/32320998-9284-4a33-89da-9aa1a403061d" />
+
